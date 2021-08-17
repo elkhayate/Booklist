@@ -8,9 +8,9 @@ import { ThemeContext } from '../contexts/ThemeContext';
 
 export default function Navbar() {
     const {books} = useContext(BookContext);
-    const {lighte, dark , light , toggler } = useContext(ThemeContext);
-    const onOroff = lighte ? on : off;
-    const Theme = lighte ? light : dark;
+    const {isLight, dark , light , toggler } = useContext(ThemeContext);
+    const onOroff = isLight ? on : off;
+    const Theme = isLight ? light : dark;
     
     return(
         <div  style={{ background : Theme.bg, color : Theme.syntax }} className={style.Navbar}>

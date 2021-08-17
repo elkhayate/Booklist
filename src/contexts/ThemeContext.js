@@ -6,15 +6,15 @@ export const ThemeContext = createContext()
 function ThemeContextProvider(props) {
     const [theme, ] = useState({
         dark : {syntax : "#ddd", bg : "#555"},
-        light : {syntax : "#555", bg : "#eee"}
+        light : {syntax : "black", bg : "#eee"}
     })
-    const [lighte , setLight] = useState(true);
+    const [isLight , setLight] = useState(true);
 
     const toggler = () => {
-        setLight(!lighte)
+        setLight(!isLight)
     }
     return (
-        <ThemeContext.Provider value ={{lighte, dark : theme.dark, light : theme.light, toggler}}>
+        <ThemeContext.Provider value ={{isLight, dark : theme.dark, light : theme.light, toggler}}>
             {props.children}
         </ThemeContext.Provider>
     )
