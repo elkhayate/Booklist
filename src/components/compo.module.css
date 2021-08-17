@@ -1,0 +1,17 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+.title h1 {
+    height: 10%;
+    width: 70%;
+}
+.reminder {
+    margin-top: 40px;
+}
+.toggler {
+    margin-top: 20px;
+}
