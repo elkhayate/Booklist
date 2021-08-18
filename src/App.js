@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from './components/Navbar';
 import ThemeContextProvider from './contexts/ThemeContext';
 import BookList from './components/BookList';
+import BookForm from './components/BookForm';
 
 function App() {
   return(
@@ -12,6 +13,7 @@ function App() {
       <BookContextProvider>
         <Navbar />
         <BookList />
+        <BookForm />
       </BookContextProvider>
       </ThemeContextProvider>
     </div>
