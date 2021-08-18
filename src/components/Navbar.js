@@ -21,7 +21,7 @@ export default function Navbar() {
             {books.length ? <p className={style.reminder}>You have currently {books.length} books to read.</p> :
             <p className={style.reminder}>Say HI to free time no books to read !</p>}
             <div  className={style.toggler}>
-                <img  style={{cursor:"pointer"}} onClick={()=>toggler()} src = {onOroff} alt="toggler"/>
+                <img  style={{cursor:"pointer"}} onClick={toggler} src = {onOroff} alt="toggler"/>
             </div>
         </div>
     )

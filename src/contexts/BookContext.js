@@ -13,7 +13,7 @@ function BookContextProvider(props) {
         setBooks([...books, item])    
     }
     const rmBook = (id) => {
-        setBooks(
+        return setBooks(
             books.filter(book => book.id !== id)
         )
     }
