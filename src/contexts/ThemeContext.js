@@ -8,7 +8,7 @@ function ThemeContextProvider(props) {
         dark : {syntax : "#ddd", bg : "#555"},
         light : {syntax : "black", bg : "#eee"}
     })
-    const [isLight , setLight] = useState(true);
+    const [isLight , setLight] = useState(false);
 
     const toggler = () => {
         setLight(!isLight)

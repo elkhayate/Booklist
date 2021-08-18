@@ -1,19 +1,22 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import BookContextProvider from './contexts/BookContext';
 import "./App.css";
 import Navbar from './components/Navbar';
-import ThemeContextProvider from './contexts/ThemeContext';
+import ThemeContextProvider, { ThemeContext } from './contexts/ThemeContext';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 
+
 function App() {
+  const {isLight , light, dark} = useContext(ThemeContext);
+  const theme = isLight ? light : dark;
   return(
-    <div className="App">
+    <div style={{backgroundColor: theme.bg}} className="App">
       <ThemeContextProvider>
       <BookContextProvider>
         <Navbar />
-        <BookList />
         <BookForm />
+        <BookList />
       </BookContextProvider>
       </ThemeContextProvider>
     </div>
