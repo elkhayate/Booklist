@@ -1,13 +1,17 @@
-import React,{createContext,useState} from 'react';
+import React,{createContext,useState, useEffect} from 'react';
 
 
 export const BookContext = createContext();
 
 function BookContextProvider(props) {
-    const [books, setBooks] = useState([
-        {title : "The subtle art of not giving a fuck", author : "Mark Manson", id : 1},
-        {title : "Everything is fucked", author : "Mark Manson", id : 2}
-    ])
+    const local = () => {
+        const localData = localStorage.getItem("books");
+        return localData ? JSON.parse(localData) : [];
+    }
+    const [books, setBooks] = useState(local)
+    useEffect(() => {
+        localStorage.setItem("books", JSON.stringify(books))
+    },[books])
     const addBook = (item) => {
        setBooks([...books, item])    
     }
