@@ -52,3 +52,12 @@
     background-color: #555  ;
     border: none;
 }
+
+@media (max-width : 1100px)  {
+    .bookinfo {
+        width: 90%;
+    }
+    .form input {
+        margin: 20px;
+    }
+}

@@ -18,7 +18,7 @@ function BookForm() {
         
     }
     return (
-        <form onSubmit={handleSubmit} className={style.form}>
+        <form onSubmit={handleSubmit} className={style.form} >
             <input  id = "title" type="text" required name = "title"  value={book.title} placeholder="Title..." onChange={(e)=>{setBook({...book, title : e.target.value})}} />
             <input id="author"  type = "text" name = "author" value = {book.author} placeholder = "Author..." onChange={(e)=>{setBook({...book,author : e.target.value})}} />
             <button><img src={off} alt = "add"/></button>
